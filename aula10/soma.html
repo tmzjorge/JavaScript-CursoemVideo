@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 500px;
+            margin: auto;
+            padding: 50px;
+            
+            font-family: 'Courier New', Courier, monospace;
+            background-color: lightgray;
+        }
+        input{
+            margin-left: 50px;
+            height: 40px;
+            width: 80px;
+        }
+        div{
+            text-align: center;
+            background-color: rgba(56, 56, 56, 0.287);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        
+        <input type="number" name="nmr1" id="nmr1">
+        <input type="number" name="nmr2" id="nmr2">
+        <input type="button" value="Somar" id="somar">
+        <div>Resultado</div>
+    </section>
+
+    <script>
+        var s = document.getElementById('somar')
+        s.addEventListener('click', somar)
+        function somar(){
+            var n1 = document.getElementById('nmr1')
+            var n2 = document.getElementById('nmr2')
+            var s1 = Number(n1.value)
+            var s2 = Number(n2.value)
+            var txt = document.querySelector('div')
+            txt.innerText = `A soma de ${s1} e ${s2} é ${s1+s2}`
+        }
+    </script>
+
+</body>
+</html>
