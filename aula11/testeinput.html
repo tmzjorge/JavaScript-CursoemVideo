@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bem vindo!</h1>
+    <span>Selecione seu páis: 
+        <select name="pais" id="opc-pais">
+            <option value="vazio"></option>
+            <option value="brasil">Brasil</option>
+            <option value="eua">Estados Unidos</option>
+            <option value="hol">Holanda</option>
+        </select>
+        <p></p>
+
+        <script>
+            var pais = document.getElementById('opc-pais')
+            var msg = document.querySelector('p')
+            pais=='brasil' ? msg.innerHTML='Você é brasileiro' : msg;innerHTML = 'Você é estrangeiro'  
+        </script>
+</body>
+</html>

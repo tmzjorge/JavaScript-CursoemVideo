@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+
+            background-color: lightgrey;
+            padding: 10px;
+        }
+        input[type=number]{
+            height: 20px;
+            border: none;
+            text-decoration: underline;
+        }
+        input[type=button]{
+            padding: 5px;
+        }
+        .vermelho{
+            color: red;
+        }
+        .verde {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Calcular" id="bt">
+    <div id="res"></div>
+    <script>
+        var bt = document.getElementById('bt')
+        bt.addEventListener('click', calcular)
+        
+        function calcular() {
+            var res = document.getElementById('res')
+            var txtv = Number(document.getElementById('txtvel').value)
+            res.innerHTML = `Sua velociade atual é de <strong> ${txtv} Km/h.`
+            txtv>60 ? res.innerHTML += "<span class = 'vermelho'> Acima do limite de velocidade </span>" : res.innerHTML += "<span class = 'verde'> Dentro do limite de velocidade </span>"
+        }
+    </script>
+</body>
+</html>
